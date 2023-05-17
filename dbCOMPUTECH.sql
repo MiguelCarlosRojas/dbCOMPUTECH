@@ -46,7 +46,7 @@ EXEC sp_columns @table_name = 'employee';
 
 /* Crear tabla product */
 CREATE TABLE product (
-    id int  NOT NULL,
+    id int identity(1,1)  NOT NULL,
     name varchar(60)  NOT NULL,
     mark varchar(20)  NOT NULL,
     color varchar(20)  NOT NULL,
@@ -62,7 +62,7 @@ EXEC sp_columns @table_name = 'product';
 
 /* Crear tabla sale */
 CREATE TABLE sale (
-    id int  NOT NULL,
+    id int identity(1,1)  NOT NULL,
     client_id int  NOT NULL,
     employee_id int  NOT NULL,
     type_payment char(1)  NOT NULL,
@@ -75,7 +75,7 @@ EXEC sp_columns @table_name = 'sale';
 
 /* Crear tabla sale_detail */
 CREATE TABLE sale_detail (
-    id int  NOT NULL,
+    id int identity(1,1)  NOT NULL,
     product_id int  NOT NULL,
     sale_id int  NOT NULL,
     names varchar(60)  NOT NULL,
